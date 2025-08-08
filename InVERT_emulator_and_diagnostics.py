@@ -31,11 +31,11 @@ calc_efold_time_dataset, convert_longitude_range, plot_monthly_T_pdfs, plot_grid
 # In[2]:
 
 
-path = '/home/msaenger/RESTART/Vector_autoregression/'
+path = '/home/msaenger/InVERT/Vector_autoregression/'
 
 scenario = 'Historical'
 
-savepath = '/home/msaenger/RESTART/Vector_autoregression/08.01.2025_monthly_EOFs_SSP370/'
+savepath = '/home/msaenger/InVERT/Vector_autoregression/08.01.2025_monthly_EOFs_SSP370/'
 
 n_samples = 50
 n_steps = 1032
@@ -61,7 +61,7 @@ nmodes = 100
 optimal_lag = 12
     
 # Path where LENS2 Historical data is stored
-lpath = '/home/msaenger/RESTART/Vector_autoregression/LENS2_' + scenario + '_info/'
+lpath = '/home/msaenger/InVERT/Vector_autoregression/LENS2_' + scenario + '_info/'
 
 
 
