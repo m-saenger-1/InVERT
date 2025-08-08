@@ -161,7 +161,7 @@ def check_for_nans(ds):
 
 # # DONE
 
-# path = '/home/msaenger/RESTART/CESM_LENS2/SSP370/raw_data/'
+# path = '/home/msaenger/InVERT/CESM_LENS2/SSP370/raw_data/'
 
 # keys = [] 
 
@@ -211,7 +211,7 @@ def check_for_nans(ds):
 
 # # DONE in Python Screen 
 
-# path = '/home/msaenger/RESTART/CESM_LENS2/Historical/TREFHT/combined_by_ensemble_member/'
+# path = '/home/msaenger/InVERT/CESM_LENS2/Historical/TREFHT/combined_by_ensemble_member/'
 
 # for i, ds in enumerate(ds_list):
     
@@ -223,7 +223,7 @@ def check_for_nans(ds):
     
 #     print('regridding')
     
-#     cdo_regrid(targetgrid = '/home/msaenger/RESTART/targetgrid.nc',
+#     cdo_regrid(targetgrid = '/home/msaenger/InVERT/targetgrid.nc',
 
 #            file_to_regrid = path + 'LENS2_Historical_' + keys_list[i] + '.nc',
 
@@ -239,7 +239,7 @@ def check_for_nans(ds):
 
 # ## DONE
 
-# path = '/home/msaenger/RESTART/CESM_LENS2/SSP370/combined_by_ensemble_member/regridded/'
+# path = '/home/msaenger/InVERT/CESM_LENS2/SSP370/combined_by_ensemble_member/regridded/'
 
 # # combine 50 regridded ensemble member files into one dataset with 'ensemble' dimension
 # ds = xr.open_mfdataset(path + '*.nc', concat_dim='ensemble', 
@@ -300,7 +300,7 @@ def remove_seasonal_cycle(data):
 # anoms_deseasoned_concatted
 
 
-# path = '/home/msaenger/RESTART/CESM_LENS2/SSP370/'
+# path = '/home/msaenger/InVERT/CESM_LENS2/SSP370/'
 
 
 
@@ -313,7 +313,7 @@ def remove_seasonal_cycle(data):
 ## These are the temperature anomalies used in EOF decomposition and compared to InVERT
 
 
-lpath = '/home/msaenger/RESTART/Vector_autoregression/LENS2_SSP370_info/'
+lpath = '/home/msaenger/InVERT/Vector_autoregression/LENS2_SSP370_info/'
 
 
 # In[11]:
@@ -342,7 +342,7 @@ anoms_concatted['month'] = month_da
 
 #### DONE
 
-# path = '/home/msaenger/RESTART/Vector_autoregression/LENS2_SSP370_info/EOFs_by_month/'
+# path = '/home/msaenger/InVERT/Vector_autoregression/LENS2_SSP370_info/EOFs_by_month/'
 
 # for month in range(1,13):
     
@@ -376,7 +376,7 @@ from InVERT_functions import stack_time
 
 scenario = 'SSP370'
 
-hpath = '/home/msaenger/RESTART/CESM_LENS2/'+scenario+\
+hpath = '/home/msaenger/InVERT/CESM_LENS2/'+scenario+\
         '/combined_by_ensemble_member/regridded/'
 
 # combine 50 regridded ensemble member files into one dataset with 'ensemble' dimension
@@ -401,7 +401,7 @@ LENS_anoms_stacked['month'] = month_da
 
 
 
-lpath = '/home/msaenger/RESTART/Vector_autoregression/LENS2_SSP370_info/'
+lpath = '/home/msaenger/InVERT/Vector_autoregression/LENS2_SSP370_info/'
 
 ## DONE -- # Calculate monthly climatologies of de-meaned T anomalies
 monthly_means = LENS_anoms_stacked.groupby('month').mean('time')
